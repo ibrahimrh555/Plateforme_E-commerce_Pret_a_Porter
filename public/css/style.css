@@ -1,0 +1,1039 @@
+/* Replace this in your style.css file */
+
+/* For creating CSS variables */
+:root {
+    --primary-color: #007bff; /* Primary color (blue) */
+    --color-dark: #000000;
+    --danger-color: #f0f0f0; /* Secondary color (gray) */
+    --background-color: #f8f9fa; /* Background color (light gray) */
+    --text-color: #262626; /* Text color (dark gray) */
+    --warning-color: #fa0000; /* Header background color (dark) */
+    --success-color: #28a745; /* Button color (green) */
+    --link-color: #007bff; /* Link color */
+    --font-title: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Font des titres  */
+    --font-data : 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+    --font-size: 14px; /* Base font size */
+    --padding-general: 0px; /* the padding property defines the space between an element's content and its border */
+    --border-radius: 5px; /* Border radius for rounded corners */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box; /* Add this to include padding and border in elements' total width */
+}
+
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%; /* Change from fixed width to 100% */
+    max-width: 100%; /* Ensure container doesn't overflow viewport */
+    background-color: var(--danger-color);
+    display: flex;
+    flex-wrap: wrap; /* ktkhali elements ilama9adrox ydekhlo fdik yhebto à la ligne  */
+}
+
+/* Rest of your CSS remains the same */
+
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+h2 {
+    font-size: 1rem;
+}
+h3 {
+    font-size: 0.87rem;
+}
+h4 {
+    font-size: 0.8rem;
+}
+h5 {
+    font-size: 0.77rem;
+}
+small {
+    font-size: 0.75rem;
+}
+
+.text-muted {
+    color: var(--danger-color);
+}
+p {
+    color: var(--text-color);
+}
+b {
+    color: var(--color-dark);
+}
+.primary {
+    color: var(--primary-color);
+}
+.danger {
+    color: rgb(114, 178, 251);
+}
+.success {
+    color: var(--success-color);
+}
+.warning {
+    color: var(--warning-color);
+}
+
+.aside {
+    height: 140vh;
+    display: inline-block;
+    background-color: white;
+    border-radius: 15px;
+    margin-left: 2rem;
+    width: 15%; /* Add responsive width */
+    min-width: 200px; /* Minimum width */
+}
+
+.quote {
+    display: flex;
+}
+.logo {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1.4rem;
+    align-items: center; 
+    background-color: white;
+}   
+.imgpr {
+    width: 50%;
+    height: 40px;
+    padding: 10px;
+}
+.sidebar {
+    flex-direction: column;
+    position: relative;
+    top: 3rem;
+    margin-left: 1rem;
+    background-color: white;
+    display: block;
+    width: 100%; /* Change from fixed to responsive */
+    max-width: 30vh;
+}
+.sidebar a {
+    display: flex;
+    gap: 1.5rem;
+    margin-left: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    color: rgb(136, 134, 133);
+    transition: all 300ms ease;
+}
+.close {
+    visibility: hidden;
+}
+.aside .sidebar a span {
+    font-size: 16px;
+}
+.aside .sidebar a:hover {
+    margin-left: 2rem;
+    color: rgb(188, 233, 27);
+    background-color: rgb(101, 28, 238);
+    border-radius: 10px;
+    transition: all 300ms ease;
+}
+
+/* Main content styles */
+main {
+    margin-top: 1.4rem;
+    margin-left: 1.4rem;
+    width: 45%; /* Add responsive width */
+    min-width: 300px; /* Minimum width */
+    margin-right: 2rem;
+}
+main .date {
+    display: inline-block;
+    background: grey;
+    border-radius: 20px;
+    margin-top: 15px;
+    padding: 5px 5px;
+}
+main .date input[type="date"] {
+    background: transparent;
+    color: var(--danger-color);
+}
+
+main .insights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+main .insights > div {
+    background-color: white;
+    margin-top: 1rem;
+    border-radius: 10px;
+    width: 100%; /* Make responsive */
+    padding: 1rem;
+    height: 12rem;
+    box-shadow: 0px 0px 30px gainsboro;
+    transition: all 400ms ease;
+}
+main .insights > div:hover {
+    box-shadow: none;
+}
+main .insights > div span {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 50%;
+}
+main .insights > div.sales span {
+    background: red;
+}
+main .insights > div.expenses span {
+    background: rgb(0, 110, 255);
+}
+main .insights > div.incomes span {
+    background: rgb(6, 186, 93);
+}
+main .insights > div .middle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .insights h3 {
+    margin: 1rem 0 0.6rem;
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main .insights .progress {
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    margin-top: -30px; 
+}
+main .insights svg {
+    width: 7rem;
+    height: 7rem;
+    
+}
+main .insights svg circle {
+    fill: none;
+    stroke: rgb(136, 41, 253);
+    stroke-width: 12;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 110;
+    stroke-dashoffset: 92;
+}
+main .insights .sales svg circle {
+    stroke-dashoffset: -30;
+    stroke-dasharray: 200;
+}
+main .insights .expenses svg circle {
+    stroke-dashoffset: 20;
+    stroke-dasharray: 80;
+}
+main .insights .incomes svg circle {
+    stroke-dashoffset: 35;
+    stroke-dasharray: 110;
+}
+
+main .insights .progress .number {
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.invoice-money {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5rem;
+}
+main .insights small {
+    margin-top: 1rem;
+    display: block;
+    color: rgb(136, 134, 133);
+}
+
+/* Table styles */
+main .recent-order {
+    margin-top: 1rem;
+    overflow-x: auto; /* Add scroll for tables on small screens */
+}
+main .recent-order h2 {
+    font-size: 1.3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+main .recent-order table {
+    text-align: center;
+    box-shadow: 0px 0px 30px gainsboro;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+    width: 100%;
+}
+main .recent-order table:hover {
+    box-shadow: none;
+    transition: all 500ms ease;
+}
+main .recent-order td {
+    padding: 1rem;
+    font-family: var(--font-data);
+    border-bottom: 1px solid rgb(219, 218, 218);
+    color: grey;
+}
+main .recent-order tr:last-child td {
+    border-bottom: none;
+}
+main .recent-order th {
+    font-family: var(--font-title);
+}
+main .recent-order a {
+    text-align: center;
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    color: gray;
+}
+
+/* Right side section */
+.right {
+    margin-left: 2rem;
+    margin-top: 2rem;
+    width: 25%; /* Add responsive width */
+    min-width: 250px; /* Minimum width */
+}
+
+.photo-profil img {
+    width: 2rem;
+    height: 2rem; 
+    border-radius: 50%;
+    object-fit: cover;
+}
+.right .profile {
+    display: flex;
+    margin-right: 1rem;
+    gap: 1rem;
+}
+
+.right .top {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end; /* Align to right instead of fixed margin */
+}
+
+/* Recent Updates */
+.recent-updates {
+    margin-top: 2rem;
+}
+
+.message p {
+    
+    white-space: normal; /* Allow text to wrap */
+    gap: 1rem;
+}
+.updates {
+    box-shadow: 0px 0px 30px gainsboro;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1rem;
+    width: 25rem;
+}
+
+.recent-updates :hover {
+    box-shadow: none;
+    transition: all 500ms ease;
+}
+.recent-updates .updat {
+    padding: 1rem;
+    display: flex;  
+    gap: 1rem;
+}
+
+.updat small {
+    color: rgb(125, 245, 125);
+}
+
+/* Admin bar */
+.right .theme-toggler {
+    background-color: rgb(226, 222, 222);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.right .theme-toggler span {
+    font-size: 1.4rem;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.salesan {
+    margin-top: 2rem;
+    width: 350px;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #eee;
+    height: 350px;
+}
+
+
+.anbar {
+    box-shadow: 0px 0px 30px rgb(185, 185, 185);
+    border-radius: 15px;
+    width: 23rem;
+    padding: 1rem;
+    transition: all 300ms ease;
+    margin-bottom: 1rem;
+    display: flex;
+    margin-top: 1rem;
+    gap: 1rem; 
+    align-items: center;
+}
+
+.anbar:hover {
+    box-shadow: none;
+    transition: all 300ms ease;
+}
+
+/* Sales analytics decoration */
+#last {
+    color: #4cf774;
+}
+
+.pourcentage-sales {
+    color: #238eff;
+    font-weight: bolder;
+}
+.sales-nbr {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+}
+
+.add-product button {
+    width: 100%;
+    height: 4rem;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 2px dashed blueviolet;
+    color: blueviolet;
+    box-shadow: 0 0 5px;
+}
+
+.add-product button:hover {
+    background-color: rgb(186, 245, 186);
+    color: white;
+    transition: all 500ms ease;
+}
+.img-icon1 {
+    padding: 0.5rem;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    background: rgb(175, 12, 207);
+}
+.img-icon2 {
+    padding: 0.5rem;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    background: rgb(255, 82, 154);
+}
+.img-icon3 {
+    padding: 0.5rem;
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    background: rgb(22, 209, 84);
+}
+
+/* Media queries for better responsiveness */
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 100%;
+    }
+    
+    main .insights {
+        grid-template-columns: 1fr;
+    }
+    
+    main .insights > div {
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .aside, main, .right {
+        width: 90%;
+        margin: 1rem auto;
+    }
+    
+    
+    
+}
+
+/**************** Add Product Style  ************************/
+
+
+
+
+
+/* Modal Styles */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background-color: white;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    position: relative;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #777;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #7380ec;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Image Upload Styles */
+.image-upload-container {
+    border: 2px dashed #ddd;
+    border-radius: 4px;
+    padding: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.image-upload-container:hover {
+    border-color: #7380ec;
+    background-color: rgba(115, 128, 236, 0.05);
+}
+
+.image-preview {
+    max-width: 100%;
+    max-height: 200px;
+    margin-top: 15px;
+    display: none;
+    border-radius: 4px;
+}
+
+.image-upload-label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #f0f2fe;
+    color: #7380ec;
+    border-radius: 4px;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.image-upload-label:hover {
+    background-color: #e1e4fd;
+}
+
+.image-upload-input {
+    position: absolute;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.upload-icon {
+    font-size: 40px;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #7380ec;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #5a67d8;
+    box-shadow: 0 2px 10px rgba(115, 128, 236, 0.4);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .modal {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .add-product button {
+        width: 100%;
+    }
+}
+
+/******************Top flcreud **********************/
+.topcreud {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end; /* Align to right instead of fixed margin */
+    margin-top: 2rem;
+    margin-right: 0;
+}
+.profilecreud {
+    display: flex;
+    
+    gap: 1rem;
+    
+}
+
+/****************  Css of the creud Table  **************************/
+
+.CrudTable {
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+    transition: all 300ms ease;
+    width: 68rem;
+    
+}
+
+.CrudTable h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #363949;
+    font-size: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.CrudTable h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 80px;
+    background: linear-gradient(to right, #7380ec, #5a67d8);
+    border-radius: 2px;
+}
+
+/* Table Styles */
+.CrudTable table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    border-radius: 0.7rem;
+    overflow: hidden;
+    box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.05);
+}
+
+.CrudTable thead tr {
+    background-color: #7380ec;
+    color: #fff;
+    text-align: left;
+    font-weight: 500;
+}
+
+.CrudTable th,
+.CrudTable td {
+    padding: 1rem;
+}
+
+.CrudTable tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.CrudTable tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+.CrudTable tbody tr:last-of-type {
+    border-bottom: 2px solid #7380ec;
+}
+
+.CrudTable tbody tr:hover {
+    background-color: #f1f3ff;
+    transform: scale(1.01);
+    box-shadow: 0 0.2rem 0.5rem rgba(115, 128, 236, 0.2);
+    cursor: pointer;
+}
+
+/******************************** Style de Modal d'edit pour les commandes ************************************/
+
+.modaledit {
+    
+    margin-left: 50rem;
+    margin-top: 20rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px 30px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    display: none;
+}
+
+.modaledit.show {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modaledit label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+.modaledit input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.modaledit input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.modaledit button {
+    margin-top: 10px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.modaledit button[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.modaledit button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.modaledit button[type="button"] {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.modaledit button[type="button"]:hover {
+    background-color: #c82333;
+}
+
+/*****************STYLE DYAL SETTINGS F LARAVEL ******************************/
+
+/* Modern CSS for the settings div */
+.settings {
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Spacing inside the container */
+    max-width: 600px; /* Limit the width for better readability */
+    margin: 20px auto; /* Center the div */
+    font-family: 'Arial', sans-serif; /* Clean font */
+    color: #333; /* Neutral text color */
+}
+
+.settings h2, .settings h3 {
+    color: #2c3e50; /* Darker color for headings */
+    margin-bottom: 15px; /* Space below headings */
+    font-weight: bold;
+}
+
+.settings p {
+    margin: 10px 0; /* Space between paragraphs */
+    line-height: 1.6; /* Improve readability */
+}
+
+.settings strong {
+    color: #34495e; /* Slightly darker for emphasis */
+}
+
+.settings form {
+    margin-top: 20px; /* Space above the form */
+}
+
+.settings label {
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Space below labels */
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.settings input[type="password"] {
+    width: 100%; /* Full width input fields */
+    padding: 10px; /* Padding inside the input */
+    margin-bottom: 15px; /* Space below inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px; /* Slightly larger text */
+}
+
+.settings button {
+    background-color: #3498db; /* Primary button color */
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Larger text for buttons */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.settings button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+.settings div[style*="color: green"] {
+    background-color: #d4edda; /* Light green background */
+    color: #155724; /* Dark green text */
+    padding: 10px; /* Padding inside the success message */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #c3e6cb; /* Border for success message */
+}
+
+.settings div[style*="color: red"] {
+    background-color: #f8d7da; /* Light red background */
+    color: #721c24; /* Dark red text */
+    padding: 10px; /* Padding inside the error message */
+    border-radius: 5px; /* Rounded corners */
+    border: 1px solid #f5c6cb; /* Border for error message */
+}
+
+/**************************Style pour les produits les plus vendus *******************************************/
+/* Container global des produits les plus vendus */
+.prodplus {
+    margin-top: 3rem;
+    max-width: 400px;
+    background-color: #fff;
+    box-shadow: 0px 0px 30px rgb(197, 197, 197);
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+}
+
+.prodplus:hover {
+box-shadow: none;
+transition: all 300ms ease ;
+}
+
+/* Titre */
+.prodplus h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* Liste sans puces et sans marges */
+.prodplus ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Chaque item produit : flex aligné + espacement */
+.prodplus ul li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Effet au survol sur chaque produit */
+.prodplus ul li:hover {
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Image du produit */
+.prodplus ul li img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Texte du produit */
+.prodplus ul li div strong {
+    font-size: 1rem;
+    color: #222;
+}
+
+.prodplus ul li div small {
+    color: #666;
+    font-size: 0.85rem;
+    margin-top: 2px;
+}
+
+/**********Statistiques de Dashboard**********/
+.stats-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #eee;
+    width: 29%;
+    max-width: 350px;
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    box-shadow: none;
+}
+
+.progress {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.progress svg {
+    width: 80px;
+    height: 80px;
+    transform: rotate(-90deg);
+}
+
+.progress circle {
+    fill: none;
+    stroke-width: 8;
+    stroke: #eee;
+}
+
+.progress circle:nth-child(2) {
+    stroke: #3c91e6;
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.3s ease-in-out;
+}
+
+.number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
